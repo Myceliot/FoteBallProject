@@ -5,12 +5,15 @@ public class Jogo {
     private Selecoes[] selecoesJogadoras;
     private Estadio estadio;
     private String estadoAtual;
-    private int[] Pontos= new int[4];
+    private int[] PontosPorVitoria= new int[4];
     //0-primeira Time
     //1-segunda Time
     //2-terceira time
     //3-quarta time
     
+    //Pontos que defenirao quem ganhou,perdeu ou se empatou, gerando assim pontos de vitoria.
+    private int pontosTeamA;
+    private int pontosTeamB;
     //construçao Vazia
     public Jogo() {
         selecoesJogadoras[0]=new Selecoes();
@@ -36,7 +39,8 @@ public class Jogo {
                 //3-4
                 for (int k = 0; k < 10; k++) {
                     //logica Do jogo tera 10 chances de Marcar
-                    System.out.println("Qual selecao Marcou?1-"+selecoesJogadoras);
+                    System.out.println("Qual selecao Marcou?1-"+selecoesJogadoras[i].getPaisRepresentante()+" 2-"+selecoesJogadoras[j].getPaisRepresentante()+" 3-Continua");
+                    System.out.println("");
                 }
             }
         }

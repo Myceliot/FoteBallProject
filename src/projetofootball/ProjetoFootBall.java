@@ -9,9 +9,9 @@ public class ProjetoFootBall {
         //Instancias Vazias Das Classes 
         Campeonatos campeonato= new Campeonatos();
         Estadio estadio = new Estadio();
-        Grupo grupo = new Grupo();
-        Jogo jogo = new Jogo();
         Selecoes[] selecoes = new Selecoes[48];
+        Grupo grupo = new Grupo();
+        
         
     }
     
