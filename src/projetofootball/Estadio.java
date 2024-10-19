@@ -3,12 +3,12 @@ package projetofootball;
 
 public class Estadio {
 
-    String designaçao;
-    String cidadeDePaisAnfritriao;
-    int lotaçaoMaxima;
-    final static String DESEIGNACA_POR_OMISSAO = "Sem Dados";
-    final static String CIDADEDEPAISANFRITRIAO_POR_OMISSAO = "Sem Dados";
-    final static int LOTACAOMAXIMA_POR_OMISSAO = 0;
+    private String designaçao;
+    private String cidadeDePaisAnfritriao;
+    private int lotaçaoMaxima;
+    private final static String DESEIGNACA_POR_OMISSAO = "Sem Dados";
+    private final static String CIDADEDEPAISANFRITRIAO_POR_OMISSAO = "Sem Dados";
+    private final static int LOTACAOMAXIMA_POR_OMISSAO = 0;
 
     //construçao Vazia
     public Estadio() {

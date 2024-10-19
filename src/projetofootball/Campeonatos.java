@@ -3,11 +3,11 @@ package projetofootball;
 
 
 public class Campeonatos {
-    String vencedor;
-    int numeroEdicao;
-    int anoAssociado;
-    String[] paisesOrganizadores;
-    Estadio[] Estadios;
+    private String vencedor;
+    private int numeroEdicao;
+    private int anoAssociado;
+    private String[] paisesOrganizadores;
+    private Estadio[] Estadios;
     
     //construçao Vazia
     public Campeonatos() {
