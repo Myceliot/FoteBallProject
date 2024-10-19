@@ -2,18 +2,19 @@
 package projetofootball;
 
 public class Jogo {
-    Grupo grupos;
+    Selecoes[] selecoes;
     Estadio estadio;
     String estadoAtual;
-
+    
     //construçao Vazia
     public Jogo() {
+        selecoes[0]=new Selecoes();
+        estadio =new Estadio();
     }
     //construçao do Jogo
-    public Jogo(Grupo grupos, Estadio estadio, String estadoAtual) {
-        this.grupos = grupos;
+    public Jogo(Selecoes[] selecoes, Estadio estadio) {
+        this.selecoes = selecoes;
         this.estadio = estadio;
-        this.estadoAtual = estadoAtual;
     }
     
 }
