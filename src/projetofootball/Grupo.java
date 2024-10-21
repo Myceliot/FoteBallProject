@@ -6,7 +6,7 @@ public class Grupo {
     //1 grupo = 4 selecoes
     private Selecoes[] selecoesTotal;
     private Selecoes[] Grupo= new Selecoes[4];
-    private Selecoes[][] SelecoesJogadoras= new Selecoes[6][1];
+    private Selecoes[][] SelecoesJogadoras= new Selecoes[6][2];
     private int PegaSelecoes=0;
     private int contagemDeJogosPorGrupo=0;
     private Estadio estadio;
@@ -23,6 +23,7 @@ public class Grupo {
         this.selecoesTotal = selecoes;
         this.estadio=estadio;
     }
+    //Forma Um grupo Usando uma linha muito complexa...
     public void FormarGrupo(Selecoes[] selecoes){
         for (int i = 0; i < Grupo.length; i++) {
             Grupo[i]=selecoesTotal[PegaSelecoes];
@@ -47,6 +48,7 @@ public class Grupo {
         SelecoesJogadoras[5][0]=Grupo[2];
         SelecoesJogadoras[5][1]=Grupo[3];
     }
+    //auto explicativo Agenda um jogo caso nenhum esteja agendado
     public void AgendarJogo(){
         if (!JogoAgendado) {
             JogoAgendado=true;
@@ -55,7 +57,7 @@ public class Grupo {
         }
         
     }
-    
+    //Ve se tem jogo rodando e agendado, se nao tiver rodando mas estiver agendado tera a confirmaçao para comecar um novo Jogo
     public void ConfirmaçaoDeJogoPendente(){
     if(JogoRodando=true){
         System.out.println("A um jogo sendo feito");
@@ -66,20 +68,33 @@ public class Grupo {
     }
     
     }
+    //Define Que apenas 2 teams Estaram Jogando e serao sempre diferentes
     private void JogoSorter(Selecoes[][] Sorter){
+        Selecoes[][] VS = new Selecoes[1][2];
         switch (contagemDeJogosPorGrupo) {
             case 0:
-                NoJogo(Sorter[contagemDeJogosPorGrupo][1]);
+                VS[0][1]=Sorter[0][1];
+                NoJogo(VS);
                 break;
             case 1:
+                VS[0][1]=Sorter[1][1];
+                NoJogo(VS);
                 break;
             case 2:
+                VS[0][1]=Sorter[2][1];
+                NoJogo(VS);
                 break;
             case 3:
+                VS[0][1]=Sorter[3][1];
+                NoJogo(VS);
                 break;
             case 4:
+                VS[0][1]=Sorter[4][1];
+                NoJogo(VS);
                 break;
             case 5:
+                VS[0][1]=Sorter[5][1];
+                NoJogo(VS);
                 break;
             default:
                 System.out.println("Acabou");
@@ -87,7 +102,7 @@ public class Grupo {
     }
     
     private Jogo NoJogo(Selecoes[][] selecoes){
-        Jogo jogo= new Jogo();
+        Jogo jogo= new Jogo(selecoes);
         return jogo;
     }
    

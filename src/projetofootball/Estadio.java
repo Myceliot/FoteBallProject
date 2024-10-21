@@ -12,7 +12,7 @@ public class Estadio {
 
     //construçao Vazia
     public Estadio() {
-        this.designaçao = DESEIGNACA_POR_OMISSAO;
+        this.designaçao = DESIGNACAO_POR_OMISSAO;
         this.cidadeDePaisAnfritriao = CIDADEDEPAISANFRITRIAO_POR_OMISSAO;
         this.lotaçaoMaxima = LOTACAOMAXIMA_POR_OMISSAO;
     }
@@ -20,6 +20,30 @@ public class Estadio {
     public Estadio(String designaçao, String cidadeDePaisAnfritriao, int lotaçaoMaxima) {
         this.designaçao = designaçao;
         this.cidadeDePaisAnfritriao = cidadeDePaisAnfritriao;
+        this.lotaçaoMaxima = lotaçaoMaxima;
+    }
+
+    public String getDesignaçao() {
+        return designaçao;
+    }
+
+    public void setDesignaçao(String designaçao) {
+        this.designaçao = designaçao;
+    }
+
+    public String getCidadeDePaisAnfritriao() {
+        return cidadeDePaisAnfritriao;
+    }
+
+    public void setCidadeDePaisAnfritriao(String cidadeDePaisAnfritriao) {
+        this.cidadeDePaisAnfritriao = cidadeDePaisAnfritriao;
+    }
+
+    public int getLotaçaoMaxima() {
+        return lotaçaoMaxima;
+    }
+
+    public void setLotaçaoMaxima(int lotaçaoMaxima) {
         this.lotaçaoMaxima = lotaçaoMaxima;
     }
     
