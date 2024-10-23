@@ -2,32 +2,44 @@
 package projetofootball;
 
 public class Campeonatos {
+    //Atributos
     private String vencedor;
     private int numeroEdicao;
     private int anoAssociado;
     private String[] paisesOrganizadores;
-    private Estadio[] Estadios ;
+    private Estadio[] estadios ;
+    private int numeroParticipantes;
+    private int numeroSelecoesInscritas;
     private Selecoes[] selecoes;
+    
+    
+    //Constantes
     private int numeroEdicao_POR_OMISSAO=0;
     private int anoAssociado_POR_OMISSAO=0;
-    private String[] paisesOrganizadores_POR_OMISSAO={""};
-    private Estadio[] Estadios_POR_OMISSAO={new Estadio()};
-    private Selecoes[] selecoes_POR_OMISSAO={new Selecoes()};
+    private static final String[] paisesOrganizadores_POR_OMISSAO={""};
+    private static final Estadio[] estadios_POR_OMISSAO = new Estadio[1];
+    private static final int NUMERO_PARTICIPANTES_POR_OMISSAO=0;
     //construçao Vazia
     public Campeonatos() {
-        this.selecoes= selecoes_POR_OMISSAO;
         this.numeroEdicao = numeroEdicao_POR_OMISSAO;
         this.anoAssociado = anoAssociado_POR_OMISSAO;
         this.paisesOrganizadores = paisesOrganizadores_POR_OMISSAO;
-        this.Estadios = Estadios_POR_OMISSAO;
+        this.estadios = estadios_POR_OMISSAO;
+        this.numeroParticipantes = NUMERO_PARTICIPANTES_POR_OMISSAO;
     }
     //construçao do Campeonato
-    public Campeonatos(int numeroEdicao, int anoAssociado, String[] paisesOrganizadores, Estadio[] Estadios, Selecoes[] selecoes) {
-        this.selecoes=selecoes;
-        this.numeroEdicao = numeroEdicao;
+
+    public Campeonatos(int anoAssociado, int numeroParticipantes) {
         this.anoAssociado = anoAssociado;
-        this.paisesOrganizadores = paisesOrganizadores;
-        this.Estadios = Estadios;
+        this.numeroParticipantes = numeroParticipantes;
+        this.selecoes = new Selecao[numeroParticipante];
+    }
+    
+    public void AdicionaSelecao(Selecoes selecoes){
+    this.selecoes[numeroSelecoesInscritas]=selecoes
+           numeroSelecoesInscritas++;
+    
+    
     }
 
     public Selecoes[] getSelecoes() {

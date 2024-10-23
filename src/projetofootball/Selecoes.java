@@ -71,5 +71,10 @@ public class Selecoes {
     public void setMundiaisConquistados(int mundiaisConquistados) {
         this.mundiaisConquistados = mundiaisConquistados;
     }
+
+    @Override
+    public String toString() {
+        return "Selecoes{" + "paisRepresentante=" + paisRepresentante + ", nomeEApelidoDoSelecionador=" + nomeEApelidoDoSelecionador + ", capitaoDeEquipa=" + capitaoDeEquipa + ", numeroDePresencasEmMundiais=" + numeroDePresencasEmMundiais + ", mundiaisConquistados=" + mundiaisConquistados + '}';
+    }
     
 }
