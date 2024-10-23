@@ -30,6 +30,7 @@ public class Grupo {
         this.NumeroParticipantes=NumeroParticipantes;
         
     }
+    
     //Forma Um grupo Usando uma linha muito complexa...
     public void FormarGrupo(){
         contagemDeJogosPorGrupo=0;
@@ -165,5 +166,9 @@ public class Grupo {
     public void setEstadio(Estadio estadio) {
         this.estadio = estadio;
     }
-   
+    public void ShowPoints(){
+        for (int i = 0; i < Pontos.length; i++) {
+            System.out.println(i+"-"+Pontos[i]);
+        }
+    }
 }
