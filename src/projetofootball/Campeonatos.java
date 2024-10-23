@@ -1,26 +1,43 @@
 
 package projetofootball;
 
-
 public class Campeonatos {
     private String vencedor;
     private int numeroEdicao;
     private int anoAssociado;
     private String[] paisesOrganizadores;
-    private Estadio[] Estadios;
-    
+    private Estadio[] Estadios ;
+    private Selecoes[] selecoes;
+    private int numeroEdicao_POR_OMISSAO=0;
+    private int anoAssociado_POR_OMISSAO=0;
+    private String[] paisesOrganizadores_POR_OMISSAO={""};
+    private Estadio[] Estadios_POR_OMISSAO={new Estadio()};
+    private Selecoes[] selecoes_POR_OMISSAO={new Selecoes()};
     //construçao Vazia
     public Campeonatos() {
+        this.selecoes= selecoes_POR_OMISSAO;
+        this.numeroEdicao = numeroEdicao_POR_OMISSAO;
+        this.anoAssociado = anoAssociado_POR_OMISSAO;
+        this.paisesOrganizadores = paisesOrganizadores_POR_OMISSAO;
+        this.Estadios = Estadios_POR_OMISSAO;
     }
     //construçao do Campeonato
-    public Campeonatos(String vencedor, int numeroEdicao, int anoAssociado, String[] paisesOrganizadores, Estadio[] Estadios) {
-        this.vencedor = vencedor;
+    public Campeonatos(int numeroEdicao, int anoAssociado, String[] paisesOrganizadores, Estadio[] Estadios, Selecoes[] selecoes) {
+        this.selecoes=selecoes;
         this.numeroEdicao = numeroEdicao;
         this.anoAssociado = anoAssociado;
         this.paisesOrganizadores = paisesOrganizadores;
         this.Estadios = Estadios;
     }
 
+    public Selecoes[] getSelecoes() {
+        return selecoes;
+    }
+
+    public void setSelecoes(Selecoes[] selecoes) {
+        this.selecoes = selecoes;
+    }
+    
     public String getVencedor() {
         return vencedor;
     }

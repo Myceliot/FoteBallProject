@@ -12,9 +12,10 @@ public class Grupo {
     private Estadio estadio;
     private boolean JogoRodando;
     private boolean JogoAgendado;
+    private Selecoes[] selecoesTotal_POR_OMISSAO={new Selecoes()};
     //construçao Vazia
     public Grupo() {
-        selecoesTotal[0]= new Selecoes();
+        selecoesTotal=selecoesTotal_POR_OMISSAO;
         estadio= new Estadio();
     }
     
@@ -104,6 +105,22 @@ public class Grupo {
     private Jogo NoJogo(Selecoes[][] selecoes){
         Jogo jogo= new Jogo(selecoes);
         return jogo;
+    }
+
+    public Selecoes[] getSelecoesTotal() {
+        return selecoesTotal;
+    }
+
+    public void setSelecoesTotal(Selecoes[] selecoesTotal) {
+        this.selecoesTotal = selecoesTotal;
+    }
+
+    public Estadio getEstadio() {
+        return estadio;
+    }
+
+    public void setEstadio(Estadio estadio) {
+        this.estadio = estadio;
     }
    
 }
