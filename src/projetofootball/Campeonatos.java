@@ -32,7 +32,7 @@ public class Campeonatos {
     public Campeonatos(int anoAssociado, int numeroParticipantes) {
         this.anoAssociado = anoAssociado;
         this.numeroParticipantes = numeroParticipantes;
-        this.selecoes = new Selecao[numeroParticipante];
+        this.selecoes = new Selecoes[numeroParticipantes];
     }
     
     public void AdicionaSelecao(Selecoes selecoes){
@@ -83,11 +83,11 @@ public class Campeonatos {
     }
 
     public Estadio[] getEstadios() {
-        return Estadios;
+        return estadios;
     }
 
     public void setEstadios(Estadio[] Estadios) {
-        this.Estadios = Estadios;
+        this.estadios = Estadios;
     }
     
        

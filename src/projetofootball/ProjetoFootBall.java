@@ -77,7 +77,40 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
         grupo.Finalizar();
-        
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar();
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar();
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar();
+       
         
     }
     

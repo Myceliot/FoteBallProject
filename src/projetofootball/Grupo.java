@@ -33,7 +33,11 @@ public class Grupo {
     
     //Forma Um grupo Usando uma linha muito complexa...
     public void FormarGrupo(){
-        contagemDeJogosPorGrupo=0;
+        if (contagemDeJogosPorGrupo==6) {
+            contagemDeJogosPorGrupo=0;
+        }
+        if (contagemDeJogosPorGrupo==0) {
+        
         for (int i = 0; i < Grupo.length; i++) {
             Grupo[i]=selecoesTotal[PegaSelecoes];
             PegaSelecoes++;
@@ -67,6 +71,10 @@ public class Grupo {
         SelecoesJogadoras[5][0]=Grupo[2];
         SelecoesJogadoras[5][1]=Grupo[3];
         System.out.println("6#");
+        }else{
+            System.out.println("Grupos Nao podem ser feitos se os jogos dentro deles nao acabou.");
+        }
+        
     }
     //auto explicativo Agenda um jogo caso nenhum esteja agendado
     public void AgendarJogo(){
