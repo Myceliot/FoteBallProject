@@ -36,7 +36,7 @@ public class Campeonatos {
     }
     
     public void AdicionaSelecao(Selecoes selecoes){
-    this.selecoes[numeroSelecoesInscritas]=selecoes
+    this.selecoes[numeroSelecoesInscritas]=selecoes;
            numeroSelecoesInscritas++;
     
     

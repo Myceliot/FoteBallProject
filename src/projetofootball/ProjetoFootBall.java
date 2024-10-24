@@ -3,7 +3,7 @@ package projetofootball;
 
 
 import java.util.*;
-public class Fute {
+public class ProjetoFootBall {
 
    
     public static void main(String[] args) {
