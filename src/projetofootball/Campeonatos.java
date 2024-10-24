@@ -89,6 +89,14 @@ public class Campeonatos {
     public void setEstadios(Estadio[] Estadios) {
         this.estadios = Estadios;
     }
+
+    public int getNumeroParticipantes() {
+        return numeroParticipantes;
+    }
+
+    public void setNumeroParticipantes(int numeroParticipantes) {
+        this.numeroParticipantes = numeroParticipantes;
+    }
     
        
 }
