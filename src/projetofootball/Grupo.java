@@ -108,25 +108,25 @@ public class Grupo {
                 contagemDeJogosPorGrupo++;
                 break;
             case 2:
-                VS[0][1]=Sorter[2][0];
+                VS[0][0]=Sorter[2][0];
                 VS[0][1]=Sorter[2][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 3:
-                VS[0][1]=Sorter[3][0];
+                VS[0][0]=Sorter[3][0];
                 VS[0][1]=Sorter[3][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 4:
-                VS[0][1]=Sorter[4][0];
+                VS[0][0]=Sorter[4][0];
                 VS[0][1]=Sorter[4][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 5:
-                VS[0][1]=Sorter[5][0];
+                VS[0][0]=Sorter[5][0];
                 VS[0][1]=Sorter[5][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
