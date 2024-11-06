@@ -4,10 +4,12 @@ package projetofootball;
 public class Grupo {
     //12 grupos = 48 selecoes
     //1 grupo = 4 selecoes
+    private Selecoes TeamA;
+    private Selecoes TeamB;
     private Jogo jogo;
-    private int NumeroParticipantes=10;
+    private int NumeroParticipantes=0;
     private int IncrementaPonto=0;
-    private int[] Pontos = new int[NumeroParticipantes];
+    
     private Selecoes[] selecoesTotal;
     private Selecoes[] Grupo= new Selecoes[4];
     private Selecoes[][] SelecoesJogadoras= new Selecoes[6][2];
@@ -17,10 +19,12 @@ public class Grupo {
     private boolean JogoRodando=false;
     private boolean JogoAgendado=false;
     private static final Selecoes[] selecoesTotal_POR_OMISSAO={new Selecoes()};
+    private static final int INSCRITAS_POR_OMISSAO=0;
     //construçao Vazia
     public Grupo() {
         selecoesTotal=selecoesTotal_POR_OMISSAO;
         estadio= new Estadio();
+        this.NumeroParticipantes=INSCRITAS_POR_OMISSAO;
     }
     
     //construçao do Grupo
@@ -106,36 +110,48 @@ public class Grupo {
             case 0:
                 VS[0][0]=Sorter[0][0];
                 VS[0][1]=Sorter[0][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 1:
                 VS[0][0]=Sorter[1][0];
                 VS[0][1]=Sorter[1][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 2:
                 VS[0][0]=Sorter[2][0];
                 VS[0][1]=Sorter[2][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 3:
                 VS[0][0]=Sorter[3][0];
                 VS[0][1]=Sorter[3][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 4:
                 VS[0][0]=Sorter[4][0];
                 VS[0][1]=Sorter[4][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
             case 5:
                 VS[0][0]=Sorter[5][0];
                 VS[0][1]=Sorter[5][1];
+                TeamA=VS[0][0];
+                TeamB=VS[0][1];
                 jogo = new Jogo(VS);
                 contagemDeJogosPorGrupo++;
                 break;
@@ -151,12 +167,18 @@ public class Grupo {
         }
         return null; 
     }
-    public void Finalizar(){
-    Pontos[IncrementaPonto]=jogo.FinalizarJogo()[0];
-    IncrementaPonto++;
-    Pontos[IncrementaPonto]=jogo.FinalizarJogo()[1];
-    IncrementaPonto++;
+    public void Finalizar(Jogo Jogo){
+    jogo.FinalizarJogo();
     JogoRodando=false;
+    }
+
+    public int getNumeroParticipantes() {
+        return NumeroParticipantes;
+    }
+
+    public void setNumeroParticipantes(int NumeroParticipantes) {
+        this.NumeroParticipantes = NumeroParticipantes;
+        
     }
 
     public Selecoes[] getSelecoesTotal() {
@@ -174,9 +196,5 @@ public class Grupo {
     public void setEstadio(Estadio estadio) {
         this.estadio = estadio;
     }
-    public void ShowPoints(){
-        for (int i = 0; i < Pontos.length; i++) {
-            System.out.println(i+"-"+Pontos[i]);
-        }
-    }
+    
 }

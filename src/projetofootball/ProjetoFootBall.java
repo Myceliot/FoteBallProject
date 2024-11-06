@@ -166,14 +166,53 @@ public class ProjetoFootBall {
         selecoes[3].setNomeEApelidoDoSelecionador("Guilherme Moura");
         selecoes[3].setNumeroDePresencasEmMundiais(10);
         selecoes[3].setPaisRepresentante("Argentina");
+        //selecoes #5
+        selecoes[4]= new Selecoes();
+        selecoes[4].setCapitaoDeEquipa("Selecao 5");
+        selecoes[4].setMundiaisConquistados(10);
+        selecoes[4].setNomeEApelidoDoSelecionador("selecao 5");
+        selecoes[4].setNumeroDePresencasEmMundiais(10);
+        selecoes[4].setPaisRepresentante("5");
+        //selecoes #6
+        selecoes[5]= new Selecoes();
+        selecoes[5].setCapitaoDeEquipa("Selecao 6");
+        selecoes[5].setMundiaisConquistados(10);
+        selecoes[5].setNomeEApelidoDoSelecionador("selecao 6");
+        selecoes[5].setNumeroDePresencasEmMundiais(10);
+        selecoes[5].setPaisRepresentante("6");
+        //selecoes #7
+        selecoes[6]= new Selecoes();
+        selecoes[6].setCapitaoDeEquipa("Selecao 7");
+        selecoes[6].setMundiaisConquistados(10);
+        selecoes[6].setNomeEApelidoDoSelecionador("selecao 7");
+        selecoes[6].setNumeroDePresencasEmMundiais(10);
+        selecoes[6].setPaisRepresentante("7");
+        //selecoes #8
+        selecoes[7]= new Selecoes();
+        selecoes[7].setCapitaoDeEquipa("Selecao 8");
+        selecoes[7].setMundiaisConquistados(10);
+        selecoes[7].setNomeEApelidoDoSelecionador("selecao 8");
+        selecoes[7].setNumeroDePresencasEmMundiais(10);
+        selecoes[7].setPaisRepresentante("8");
         //Campeonato
         campeonato.setAnoAssociado(2000);
+        
+        
         //campeonato.setEstadios(estadios);
+        campeonato.setNumeroParticipantes(20);
+        for (int i = 0; i < selecoes.length; i++) {
+            if (selecoes[i]!=null) {
+                campeonato.AdicionaSelecao(selecoes[i]);   
+            }
+         
+        }
         campeonato.setNumeroEdicao(2016);
         campeonato.setPaisesOrganizadores(Paises);
         //Grupo
         grupo.setEstadio(estadios[0]);
         grupo.setSelecoesTotal(selecoes);
+        grupo.setNumeroParticipantes(campeonato.getNumeroParticipantes());
+        //Jogo
         grupo.FormarGrupo();
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();
@@ -185,7 +224,7 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamAMakeGoal();
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
-        grupo.Finalizar();
+        grupo.Finalizar(grupo.NoJogo());
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();
         grupo.NoJogo().TEAMSDEBUG();
@@ -196,7 +235,7 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamAMakeGoal();
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
-        grupo.Finalizar();
+        grupo.Finalizar(grupo.NoJogo());
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();
         grupo.NoJogo().TEAMSDEBUG();
@@ -207,7 +246,7 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamAMakeGoal();
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
-        grupo.Finalizar();
+        grupo.Finalizar(grupo.NoJogo());
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();
         grupo.NoJogo().TEAMSDEBUG();
@@ -218,7 +257,7 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamAMakeGoal();
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
-        grupo.Finalizar();
+        grupo.Finalizar(grupo.NoJogo());
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();
         grupo.NoJogo().TEAMSDEBUG();
@@ -229,9 +268,19 @@ public class ProjetoFootBall {
         grupo.NoJogo().TeamAMakeGoal();
         grupo.NoJogo().TeamBMakeGoal();
         grupo.NoJogo().Score();
-        grupo.Finalizar();
-       
-    
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        campeonato.showPoints();
     
     
     }

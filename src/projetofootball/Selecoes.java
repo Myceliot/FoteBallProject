@@ -9,6 +9,8 @@ public class Selecoes {
     private String capitaoDeEquipa;
     private int numeroDePresencasEmMundiais;
     private int mundiaisConquistados;
+    private int PontosPorVitoria;
+    private int Pontos;
     private final static String PAISREPRESENTANTE_POR_OMISSAO="SEM PAIS";
     private final static String NOMEEAPELIDODOREPRESENTANTE_POR_OMISSAO="SEM NOME && APELIDO";
     private final static String CAPITAODEEQUIPA_POR_OMISSAO="SEM CAPITAO";
@@ -30,6 +32,22 @@ public class Selecoes {
         this.capitaoDeEquipa = capitaoDeEquipa;
         this.numeroDePresencasEmMundiais = numeroDePresencasEmMundiais;
         this.mundiaisConquistados = mundiaisConquistados;
+    }
+
+    public int getPontosPorVitoria() {
+        return PontosPorVitoria;
+    }
+
+    public void setPontosPorVitoria(int PontosPorVitoria) {
+        this.PontosPorVitoria += PontosPorVitoria;
+    }
+
+    public int getPontos() {
+        return Pontos;
+    }
+
+    public void setPontos(int Pontos) {
+        this.Pontos += Pontos;
     }
 
     public String getPaisRepresentante() {

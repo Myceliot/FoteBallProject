@@ -36,6 +36,7 @@ public class Campeonatos {
     }
     
     public void AdicionaSelecao(Selecoes selecoes){
+        
     this.selecoes[numeroSelecoesInscritas]=selecoes;
            numeroSelecoesInscritas++;
     
@@ -96,7 +97,17 @@ public class Campeonatos {
 
     public void setNumeroParticipantes(int numeroParticipantes) {
         this.numeroParticipantes = numeroParticipantes;
+        this.selecoes = new Selecoes[numeroParticipantes];
     }
-    
+    public void showPoints(){
+        for (int i = 0; i < selecoes.length; i++) {
+            if (selecoes[i]!=null) {
+                System.out.println("=================================");
+                System.out.println(selecoes[i].getPaisRepresentante()+":"+selecoes[i].getPontos());
+                System.out.println("=================================");
+            }
+            
+        }
+    }
        
 }
