@@ -102,9 +102,9 @@ public class Campeonatos {
     public void showPoints(){
         for (int i = 0; i < selecoes.length; i++) {
             if (selecoes[i]!=null) {
-                System.out.println("=================================");
+                System.out.println("=====================================");
                 System.out.println(selecoes[i].getPaisRepresentante()+":"+selecoes[i].getPontos());
-                System.out.println("=================================");
+                System.out.println("=====================================");
             }
             
         }

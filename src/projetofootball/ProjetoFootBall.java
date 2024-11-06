@@ -117,7 +117,7 @@ public class ProjetoFootBall {
                 grupo.NoJogo().Score();
                 break;
             case 8:
-                grupo.Finalizar();
+                grupo.Finalizar(grupo.NoJogo());
                 break;
             default:
                 System.out.println("1,2,3,4,5,6,7,8!");
@@ -212,7 +212,83 @@ public class ProjetoFootBall {
         grupo.setEstadio(estadios[0]);
         grupo.setSelecoesTotal(selecoes);
         grupo.setNumeroParticipantes(campeonato.getNumeroParticipantes());
-        //Jogo
+        //Campeonato Grupo 1
+        grupo.FormarGrupo();
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        grupo.AgendarJogo();
+        grupo.ConfirmaçaoDeJogoPendente();
+        grupo.NoJogo().TEAMSDEBUG();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamAMakeGoal();
+        grupo.NoJogo().TeamBMakeGoal();
+        grupo.NoJogo().Score();
+        grupo.Finalizar(grupo.NoJogo());
+        campeonato.showPoints();
+        //Testes
+        //Anti Varios Agendamentos funcionando
+        grupo.AgendarJogo();
+        //Anti Varios Inicios De Jogo funcionando
+        grupo.ConfirmaçaoDeJogoPendente();
+        //
+        grupo.FormarGrupo();
+        //Campeonato Grupo 2
         grupo.FormarGrupo();
         grupo.AgendarJogo();
         grupo.ConfirmaçaoDeJogoPendente();

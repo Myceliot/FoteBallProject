@@ -16,10 +16,10 @@ public class Jogo {
      * Faz Um debug das teams "ToString nas classes"
      */
     public void TEAMSDEBUG(){
-        System.out.println("==========");
+        System.out.println("=====================================");
         System.out.println(TeamA.toString());
         System.out.println(TeamB.toString());
-        System.out.println("==========");
+        System.out.println("=====================================");
     }
     /**
      * Faz a TeamA Marcar Ponto
@@ -27,9 +27,13 @@ public class Jogo {
     public void TeamAMakeGoal(){
         int VAR = (int)(Math.random()*3);
             TeamA.setPontos(1);
+            System.out.println("=====================================");
         System.out.println("GOLO! Para a "+TeamA.getPaisRepresentante());
+        System.out.println("=====================================");
         if (VAR==1) {
+            System.out.println("=====================================");
             System.out.println("ERRO, GOLO Nao contou!");
+            System.out.println("=====================================");
             TeamA.setPontos(-1);
         }
     }
@@ -39,9 +43,13 @@ public class Jogo {
     public void TeamBMakeGoal(){
         int VAR = (int)(Math.random()*3);
        TeamB.setPontos(1);
+       System.out.println("=====================================");
         System.out.println("GOLO! Para a "+TeamB.getPaisRepresentante());
+        System.out.println("=====================================");
         if (VAR==1) {
+            System.out.println("=====================================");
             System.out.println("ERRO, GOLO Nao contou!");
+            System.out.println("=====================================");
            TeamB.setPontos(-1);
         }
     }
@@ -50,6 +58,7 @@ public class Jogo {
      * Mostra os Pontos Atuais Do Jogo
      */
     public void Score(){
+        System.out.println("=====================================");
         System.out.println(TeamA.getPontos()+"-"+TeamB.getPontos());
     }
     /**
@@ -60,9 +69,18 @@ public class Jogo {
         
         if (TeamA.getPontos()<TeamB.getPontos()) {
             TeamA.setPontosPorVitoria(3);
+            System.out.println("=====================================");
+            System.out.println("VITORIA:"+TeamA.getPaisRepresentante());
+            System.out.println("=====================================");
         }else if(TeamA.getPontos()>TeamB.getPontos()){
             TeamB.setPontosPorVitoria(3);
+            System.out.println("=====================================");
+            System.out.println("VITORIA:"+TeamB.getPaisRepresentante());
+            System.out.println("=====================================");
         }else{
+            System.out.println("=====================================");
+            System.out.println("EMPATE +1 PARA TODOS!");
+            System.out.println("=====================================");
             TeamB.setPontosPorVitoria(1);
             TeamB.setPontosPorVitoria(1);
         }
