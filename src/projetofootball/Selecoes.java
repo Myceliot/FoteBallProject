@@ -11,6 +11,8 @@ public class Selecoes {
     private int mundiaisConquistados;
     private int PontosPorVitoria;
     private int Pontos;
+    
+    //constantes
     private final static String PAISREPRESENTANTE_POR_OMISSAO="SEM PAIS";
     private final static String NOMEEAPELIDODOREPRESENTANTE_POR_OMISSAO="SEM NOME && APELIDO";
     private final static String CAPITAODEEQUIPA_POR_OMISSAO="SEM CAPITAO";

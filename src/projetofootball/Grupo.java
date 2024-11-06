@@ -14,12 +14,15 @@ public class Grupo {
     private Selecoes[] Grupo= new Selecoes[4];
     private Selecoes[][] SelecoesJogadoras= new Selecoes[6][2];
     private int PegaSelecoes=0;
-    private int contagemDeJogosPorGrupo=0;
+    private int contagemDeJogosPorGrupo=-1;
     private Estadio estadio;
     private boolean JogoRodando=false;
     private boolean JogoAgendado=false;
+    
+    //Constantes
     private static final Selecoes[] selecoesTotal_POR_OMISSAO={new Selecoes()};
     private static final int INSCRITAS_POR_OMISSAO=0;
+    
     //construçao Vazia
     public Grupo() {
         selecoesTotal=selecoesTotal_POR_OMISSAO;
@@ -35,17 +38,22 @@ public class Grupo {
         
     }
     
-    //Forma Um grupo Usando uma linha muito complexa...
+    /**
+     * Faz Um Grupo de 4 Selecoes
+     * Apenas Faz Caso As Teams Anteriores Tenham Feito Os seus 6 Jogos
+     */
     public void FormarGrupo(){
         if (contagemDeJogosPorGrupo==6) {
-            contagemDeJogosPorGrupo=0;
+            contagemDeJogosPorGrupo=-1;
         }
-        if (contagemDeJogosPorGrupo==0) {
         
+        if (contagemDeJogosPorGrupo==-1) {
+        contagemDeJogosPorGrupo++;
         for (int i = 0; i < Grupo.length; i++) {
             Grupo[i]=selecoesTotal[PegaSelecoes];
             PegaSelecoes++;
         }
+        
         System.out.println("Grupo Formado!");
         System.out.println(Grupo[0].getPaisRepresentante());
         System.out.println(Grupo[1].getPaisRepresentante());
@@ -55,32 +63,41 @@ public class Grupo {
         SelecoesJogadoras[0][0]=Grupo[0];
         SelecoesJogadoras[0][1]=Grupo[1];
         System.out.println("1#");
+        System.out.println(SelecoesJogadoras[0][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[0][1].getPaisRepresentante());
         //2# 1-3
         SelecoesJogadoras[1][0]=Grupo[0];
         SelecoesJogadoras[1][1]=Grupo[2];
         System.out.println("2#");
+        System.out.println(SelecoesJogadoras[1][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[1][1].getPaisRepresentante());
         //3# 1-4
         SelecoesJogadoras[2][0]=Grupo[0];
         SelecoesJogadoras[2][1]=Grupo[3];
         System.out.println("3#");
+        System.out.println(SelecoesJogadoras[2][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[2][1].getPaisRepresentante());
         //4# 2-3
         SelecoesJogadoras[3][0]=Grupo[1];
         SelecoesJogadoras[3][1]=Grupo[2];
         System.out.println("4#");
+        System.out.println(SelecoesJogadoras[3][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[3][1].getPaisRepresentante());
         //5# 2-4
         SelecoesJogadoras[4][0]=Grupo[1];
         SelecoesJogadoras[4][1]=Grupo[3];
         System.out.println("5#");
+        System.out.println(SelecoesJogadoras[4][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[4][1].getPaisRepresentante());
         //6# 3-4 Ultima
         SelecoesJogadoras[5][0]=Grupo[2];
         SelecoesJogadoras[5][1]=Grupo[3];
+        
         System.out.println("6#");
+        System.out.println(SelecoesJogadoras[5][0].getPaisRepresentante()+" VS "+SelecoesJogadoras[5][1].getPaisRepresentante());
         }else{
             System.out.println("Grupos Nao podem ser feitos se os jogos dentro deles nao acabou.");
         }
         
     }
-    //auto explicativo Agenda um jogo caso nenhum esteja agendado
+    /**
+     * Agenda Um Jogo Caso nenhum esteja agendado
+     */
     public void AgendarJogo(){
         if (JogoAgendado==false) {
             JogoAgendado=true;
@@ -90,7 +107,10 @@ public class Grupo {
         }
         
     }
-    //Ve se tem jogo rodando e agendado, se nao tiver rodando mas estiver agendado tera a confirmaçao para comecar um novo Jogo
+    /**
+     * Ve se tem jogo rodando e agendado.
+     * Caso nao aja um Jogo Rodando, Mas Esteja Agendado, enverte os papeis(!Agendando&&rodando)
+     */
     public void ConfirmaçaoDeJogoPendente(){
     if(JogoRodando==true){
         System.out.println("A um jogo sendo feito");
@@ -103,7 +123,12 @@ public class Grupo {
     }
   
     
-    //Define Que apenas 2 teams Estaram Jogando e serao sempre diferentes
+    /**
+     * Sorteia Jogos de forma que jogos repetidos nao acontecam.
+     * Apos o inicio de cada jogo a var contagemDeJogos é Incrementada para evitar repeticoes.
+     * @param Sorter
+     * @return 
+     */
     private Selecoes[][] JogoSorter(Selecoes[][] Sorter){
         Selecoes[][] VS = new Selecoes[1][2];
         switch (contagemDeJogosPorGrupo) {
@@ -160,18 +185,31 @@ public class Grupo {
         }
         return Sorter;
     }
-    
+    /**
+     * Serve para usar todo do Objeto Jogo incluindo Finalizar do objeto Grupo.
+     * @return 
+     */
     public Jogo NoJogo(){
         if (JogoRodando=true) {
             return this.jogo;
         }
         return null; 
     }
+    /**
+     * Finaliza o Jogo Envertendo o JogoRodando.
+     * E chamando o Finalizar do Objeto Jogo
+     * @param Jogo 
+     */
     public void Finalizar(Jogo Jogo){
+    
     jogo.FinalizarJogo();
     JogoRodando=false;
     }
-
+    
+    
+    
+    
+    //SETS GETS
     public int getNumeroParticipantes() {
         return NumeroParticipantes;
     }

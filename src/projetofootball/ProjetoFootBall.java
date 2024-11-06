@@ -287,7 +287,7 @@ public class ProjetoFootBall {
         //Anti Varios Inicios De Jogo funcionando
         grupo.ConfirmaçaoDeJogoPendente();
         //
-        grupo.FormarGrupo();
+         grupo.FormarGrupo();
         //Campeonato Grupo 2
         grupo.FormarGrupo();
         grupo.AgendarJogo();

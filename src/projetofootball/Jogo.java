@@ -4,7 +4,6 @@ package projetofootball;
 public class Jogo {
     //static int a=0;
     private Estadio estadio;
-    private String estadoAtual;
     private Selecoes TeamA;
     private Selecoes TeamB;
     //construçao do Jogo
@@ -67,12 +66,12 @@ public class Jogo {
      */
     public void FinalizarJogo(){
         
-        if (TeamA.getPontos()<TeamB.getPontos()) {
+        if (TeamA.getPontos()>TeamB.getPontos()) {
             TeamA.setPontosPorVitoria(3);
             System.out.println("=====================================");
             System.out.println("VITORIA:"+TeamA.getPaisRepresentante());
             System.out.println("=====================================");
-        }else if(TeamA.getPontos()>TeamB.getPontos()){
+        }else if(TeamA.getPontos()<TeamB.getPontos()){
             TeamB.setPontosPorVitoria(3);
             System.out.println("=====================================");
             System.out.println("VITORIA:"+TeamB.getPaisRepresentante());
@@ -84,7 +83,7 @@ public class Jogo {
             TeamB.setPontosPorVitoria(1);
             TeamB.setPontosPorVitoria(1);
         }
-        
-  
+        TeamA.setPontos(-TeamA.getPontos());
+        TeamB.setPontos(-TeamB.getPontos());
     }
 }
